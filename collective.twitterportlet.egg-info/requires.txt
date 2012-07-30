@@ -1,3 +1,4 @@
 setuptools
+Products.CMFPlone
 python-twitter
 simplejson

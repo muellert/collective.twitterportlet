@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.10'
+version = '0.20'
 
 setup(name='collective.twitterportlet',
       version=version,
@@ -23,6 +23,7 @@ setup(name='collective.twitterportlet',
       zip_safe=False,
       install_requires=[
           'setuptools',
+	  'Products.CMFPlone',
           'python-twitter',
           'simplejson'
       ],
