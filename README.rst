@@ -1,8 +1,9 @@
 collective.twitterportlet
 =========================
 
-collective.twitterportlet is a dependency of collective.blog.starIntroduction
-============
+collective.twitterportlet is a dependency of collective.blog.star
+-----------------------------------------------------------------
+
 
 A Twitter portlet for Plone. This portlet allows you to track the 'tweets' of a
 particular user. You can add as many portlets as you like. The tweets are cached
