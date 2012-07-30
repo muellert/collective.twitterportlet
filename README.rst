@@ -1,4 +1,7 @@
-Introduction
+collective.twitterportlet
+=========================
+
+collective.twitterportlet is a dependency of collective.blog.starIntroduction
 ============
 
 A Twitter portlet for Plone. This portlet allows you to track the 'tweets' of a
