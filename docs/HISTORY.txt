@@ -1,0 +1,106 @@
+Changelog
+=========
+
+0.10 - 2011-03-19
+-----------------
+
+* When having a tweet with an link containing a mixture of "&?=" the regular 
+  expression in expand_tweet creates invalid html. A failing test for that is 
+  added.
+  (Pelle Krøgholt - @pellekrogholt - irc: pelle_)
+
+* Generate proper links for URLs that contain the symbols "&?=#!". This fixes
+  the failing test mentioned above.
+  (Emanuel Sartor - @esartor)
+
+* Added ability to include native retweets in addition to the standard stream
+  of tweets.
+  (Emanuel Sartor - @esartor)
+
+0.9 - 2010-05-26
+----------------
+
+* Added simple RAM caching of the feed results for at most 100 seconds or the
+  cache timeout of the ram cache.
+  (Hanno Schlichting - @hannosch)
+
+* Added logging on the info level to all exception cases.
+  (Hanno Schlichting - @hannosch)
+
+* Handle the unresponsive twitter better by using a timeout on connections,
+  as advised in http://code.google.com/p/python-twitter/issues/detail?id=92.
+  (Hanno Schlichting - @hannosch)
+
+* Remove memoize overhead for methods that are only called once.
+  (Hanno Schlichting - @hannosch)
+
+* Catch and ignore ``TwitterError``.
+  (Hanno Schlichting - @hannosch)
+
+* Adding ability to link to the user's Twitter page as the portlet header.
+  (David Breitkreutz - @rockdj)
+
+0.8 - 2010-02-10
+----------------
+
+* Ignore all URLErrors instead of the more specific HTTPErrors. This catches
+  problems like 'Connection refused'.
+  (Hanno Schlichting - @hannosch)
+
+0.7 - 2010-02-10
+----------------
+
+* Fixed reStructuredText markup of the readme file.
+  (Hanno Schlichting - @hannosch)
+
+0.6 - 2010-02-10
+----------------
+
+* The Twitter service is surprisingly often unreachable. Protect against common
+  HTTPErrors and show an unavailable message instead of relying on the common
+  portlet on-error handling.
+  (Hanno Schlichting - @hannosch)
+
+* Removed the empty initialize method.
+  (Hanno Schlichting - @hannosch)
+
+0.5 - 2009-10-29
+----------------
+
+* Changed the limit option to push it through to the API rather than 
+  retrieving all and then slicing
+  (Ben Mason - @sparcd)
+
+* Added z3c.autoinclude.plugin entry point, so in Plone 3.3+ you can avoid
+  loading the ZCML file.
+  (Hanno Schlichting - @hannosch)
+
+* Portlet displays the error message if there is a problem accessing the API.
+  (Ben Mason - @sparcd)
+
+* Links are now hyperlinked using regex.
+  (Ben Glynn - @Open_Comms)
+
+0.4
+---
+
+* General bug fixes
+  (Ben Mason - @sparcd)
+
+0.3
+---
+
+* General bug fixes
+  (Ben Mason - @sparcd) 
+
+0.2
+---
+
+* Problems with the egg, so repackaged and re-released
+  (Ben Mason - @sparcd)
+
+0.1
+---
+
+* Initial Release
+  (Ben Mason - @sparcd)

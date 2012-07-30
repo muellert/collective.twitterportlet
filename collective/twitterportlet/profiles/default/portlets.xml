@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<portlets>
+
+ <!-- Portlet type registrations -->
+
+ <portlet
+   addview="collective.twitterportlet.TwitterPortlet"
+   title="Twitter portlet"
+   />
+
+</portlets>

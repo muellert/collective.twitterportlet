@@ -1,0 +1,36 @@
+<dl class="portlet portletTwitterPortlet"
+  i18n:domain="collective.twitterportlet"
+  tal:define="tweets view/get_tweets|nothing">
+
+  <dt class="portletHeader">
+    <span class="portletTopLeft"></span>
+    <a href="#"
+       tal:attributes="href view/profile_url"
+       tal:omit-tag="not:view/data/link_to_profile_url">
+         <tal:block replace="view/title" />
+    </a>
+    <span class="portletTopRight"></span>
+  </dt>
+
+  <tal:block tal:condition="tweets">
+    <tal:tweets tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime"
+                tal:repeat="obj tweets">
+      <dd class="portletItem" tal:define="oddrow repeat/obj/odd"
+        tal:attributes="class python:oddrow and 'portletItem even' or 'portletItem odd'">
+        <tal:block replace="structure python:view.expand(obj.text)" />
+        <span class="portletItemDetails">
+          <tal:date content="python:toLocalizedTime(obj.created_at, long_format=1)">
+            May 5
+          </tal:date>
+        </span>
+      </dd>
+    </tal:tweets>
+  </tal:block>
+
+  <tal:block tal:condition="not: tweets">
+    <dd class="portletItem odd" i18n:translate="">
+      There was a problem retrieving the twitter updates.
+    </dd>
+  </tal:block>
+
+</dl>
